@@ -1,12 +1,16 @@
 import React, { Component } from 'react';
 
-import './store'
+import {sendMessage} from './store'
 
 class App extends Component {
   render() {
     return (
       <div>
-        Hello world
+        <button
+        onClick={() => sendMessage(prompt('receiver'), prompt('text'))}
+        >
+          Send message
+        </button>
       </div>
     );
   }
